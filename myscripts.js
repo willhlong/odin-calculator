@@ -86,7 +86,12 @@ function operate(op, num1, num2) {
         calculatedValue = multiply(num1, num2);
     }
     if (op === '/') {
-        calculatedValue = divide(num1, num2);
+        if (num2 == 0) {
+            calculatedValue = "Nope..."
+        }
+        else {
+            calculatedValue = divide(num1, num2);
+        }
     }
     expression.push("=");
     displayValue(calculatedValue);
