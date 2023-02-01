@@ -47,8 +47,10 @@ opButtons.forEach(button => {
             displayValue(userInput);
         }
         else if (button.textContent === '.') {
-            userInput += button.textContent;
-            displayValue(userInput);
+            if (!userInput.includes('.')) {
+                userInput += button.textContent;
+                displayValue(userInput);
+            }
         }
         else {
             expression.push(userInput);
