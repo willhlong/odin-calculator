@@ -1,12 +1,20 @@
 let calculatedValue = 0;
-let userInput = "";
+let userInput = "0";
 let expression = [];
 let numberButtons = document.querySelectorAll(".num-button");
 let opButtons = document.querySelectorAll(".op-button");
-
+displayValue(userInput);
 numberButtons.forEach(button => {
     button.addEventListener('click', () => {
-        userInput += button.textContent;
+        if (userInput == 0) {
+            userInput = button.textContent;
+        }
+        else if (userInput === calculatedValue) {
+            userInput = button.textContent;
+        }
+        else {
+            userInput += button.textContent;
+        }
         displayValue(userInput);
     })
 });
@@ -21,7 +29,26 @@ opButtons.forEach(button => {
             }
             else {
                 displayValue("error");
+                userInput = "0";
             }
+        }
+        else if (button.textContent === 'CE') {
+            userInput = "0";
+            displayValue(0);
+        }
+        else if (button.textContent === 'C') {
+            userInput = "0";
+            displayValue(0);
+            expression = [];
+            displayExpression(expression);
+        }
+        else if (button.textContent === "+/-") {
+            userInput = Number(userInput * (-1));
+            displayValue(userInput);
+        }
+        else if (button.textContent === '.') {
+            userInput += button.textContent;
+            displayValue(userInput);
         }
         else {
             expression.push(userInput);
