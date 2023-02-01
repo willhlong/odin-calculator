@@ -47,7 +47,6 @@ html {
 .first-col>*, .second-col>*, .third-col>*, .fourth-col>* {
     border: 1px solid black;
     border-radius: 5px;
-    width: 50px;
     text-align: center;
     font-size: 40px;
 }
@@ -56,13 +55,10 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: auto;
-    gap: 20px;
 }
 
 .fourth-col>.equal {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-basis: 115px;
 }
