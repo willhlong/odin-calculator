@@ -14,13 +14,27 @@ html {
     color: black;
 }
 
-.display {
+.display-container {
     border: 1px solid black;
     border-radius: 5px;
     width: 300px;
     height: 75px;
     margin: 25px;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+.display-container>* {
+    margin-right: 10px;
+    font-size: 24px;
+} 
+
+.display-container>.display-value {
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .buttons-container {
