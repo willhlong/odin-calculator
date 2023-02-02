@@ -1,5 +1,31 @@
-html {
-    background-color: #cafafe;
+body {
+    margin: 0px;
+    font-family: "Open Sans", Helvetica, sans-serif;
+}
+
+header, footer {
+    background-color: slategrey;
+    text-align: center;
+    color: white;
+    padding: 15px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    gap: 10px;
+}
+
+img {
+    width: 25px;
+}
+
+h1 {
+    margin: 0px;
 }
 
 .calculator-container {
@@ -49,7 +75,7 @@ html {
     border: 1px solid black;
     border-radius: 5px;
     text-align: center;
-    font-size: 40px;
+    font-size: 35px;
     flex-grow: 1;
 }
 
