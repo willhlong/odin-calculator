@@ -17,6 +17,12 @@ numberButtons.forEach(button => {
         }
         displayValue(userInput);
     })
+    button.addEventListener('mouseover', () => {
+        button.style.opacity = "50%";
+    })
+    button.addEventListener('mouseout', () => {
+        button.style.opacity = "100%"
+    })
 });
 
 opButtons.forEach(button => {
@@ -58,6 +64,12 @@ opButtons.forEach(button => {
             displayExpression(expression);
             displayValue(0);
         }
+    })
+    button.addEventListener('mouseover', () => {
+        button.style.opacity = "50%";
+    })
+    button.addEventListener('mouseout', () => {
+        button.style.opacity = "100%"
     })
 })
 
